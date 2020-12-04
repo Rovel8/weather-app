@@ -37,8 +37,10 @@ const weatherInTheCity = async (city) => {
         if(wetherData.data.error){
             throw new Error("There is no city like this in database. Try another one")
         }else{
-            // console.log(wetherData.data.current)
-            return wetherData.data.current
+            return{
+                current: wetherData.data.current,
+                location: wetherData.data.location
+            }
         }
         
     }catch(error){

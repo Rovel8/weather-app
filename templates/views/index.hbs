@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>s
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    {{>header}}
-    <h2>{{title}}</h2>
-    <form class="form">
-        <label for="query">Find out the weather</label>
-        <input class="form__input" type="text" name="query" id="query">
-        <button class="form__button">Show</button>
-    </form>
-    <p class='temperature'></p>
+   <div class="wrapper">
+       <div class="container">
+        <main class="main">
+            <h1 class="main__title">Get forecast</h1>
+            <form class="main__form form-main">
+                <div class="form-main__search">
+                    <input placeholder="Provide city name" class="form-main__input" type="text" name="query" id="query">
+                    <button class="form-main__button">Show</button>
+                </div>
+            </form>
+            <p class='main__temperature'></p>
+            <p class="main__weather"></p>
+        </main>
     {{>footer}}
+       </div>
+   </div>
     <script src="/js/client.js"></script>
 </body>
 </html>

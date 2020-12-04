@@ -1,3 +1,56 @@
-h1{
-    color: grey;
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main__title{
+    text-align: center;
+    color: #616060
+}
+
+.main__form{
+    margin-top: 40px;
+}
+
+.form-main__search{
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.form-main__input{
+    height: 25px;
+    outline: none;
+    border: 1px solid rgb(85, 112, 201);
+    border-radius: 2px;
+    padding-left: 5px;
+}
+
+.form-main__button{
+    background: rgb(85, 112, 201);
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid rgb(85, 112, 201);
+    outline: none;
+    cursor: pointer;
+    transition: all 200ms ease-in 0s;
+}
+
+.form-main__button:hover{
+    background-color: rgb(114, 136, 209)
+}
+
+.form-main__button:active{
+    background-color: rgb(48, 75, 161)
+}
+
+.footer{
+    justify-self: flex-end;
 }

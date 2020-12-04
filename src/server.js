@@ -20,12 +20,6 @@ app.use(express.static(publicPath))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather'
-    })
-})
-
-app.get('/about', (req, res) => {
-    res.render('about', {
         name: 'Pavel'
     })
 })
@@ -33,21 +27,9 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         message: 'Hello from help page',
-        title: 'Help',
         name: 'Pavel'
     })
 })
-
-// app.get('/products', (req, res) => {
-//     if(!req.query.search){
-//         return res.send({
-//             error: 'You must provide a search term'
-//         })
-//     }
-//     res.send({
-//         products: []
-//     })
-// })
 
 app.get('/weather', async (req, res) => {
     if(!req.query.city){
@@ -70,14 +52,14 @@ app.get('/weather', async (req, res) => {
 
 app.get('/help/*', (req,res) => {
     res.render('error', {
-        title: '404 not found',
-        message: 'Help article not found'
+        message: 'Help article not found',
+        name: 'Pavel'
     })
 })
 
 app.get('*', (req, res) => {
     res.render('error', {
-        title: '404 not found',
+        name: 'Pavel',
         message: 'Page not found'
     })
 })
