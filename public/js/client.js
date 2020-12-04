@@ -1,6 +1,6 @@
 const getCity = async (city) => {
     try{
-        const data = await fetch(`http://localhost:3000/weather?city=${city}`)
+        const data = await fetch(`/weather?city=${city}`)
         const result = await data.json()
         console.log(result)
         return result
